@@ -16,7 +16,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -127,7 +126,7 @@ public class DimUserServiceImpl implements DimUserService {
                 DimMetroCardTO cardTO = new DimMetroCardTO();
                 cardTO.setCardId(c.getCardId());
                 cardTO.setCardNumber(c.getCardNumber());
-                cardTO.setBalance(BigDecimal.valueOf(c.getBalance()));
+                cardTO.setBalance(c.getBalance() != null ? c.getBalance() : BigDecimal.ZERO);
                 cardTO.setStatus(c.getStatus());
                 cardTO.setUserId(user.getUserId());
                 cardTO.setIssuedDate(c.getIssuedDate());

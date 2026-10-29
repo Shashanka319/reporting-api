@@ -24,11 +24,11 @@ public class DimMetroCard {
     @Column(name = "card_number", nullable = false, unique = true, length = 30)
     private String cardNumber;
 
-   // @Column(name = "balance", precision = 10, scale = 2)
-    //private BigDecimal balance;
+    @Column(name = "balance", precision = 10, scale = 2)
+    private BigDecimal balance;
 
-    @Column(name = "balance")
-    private Double balance;
+   // @Column(name = "balance")
+   // private Double balance;
 
     @Column(name = "status", length = 20)
     private String status;
