@@ -1,4 +1,4 @@
-package com.reporting_api;
+package com.reporting;
 
 import org.springframework.boot.SpringApplication;
 

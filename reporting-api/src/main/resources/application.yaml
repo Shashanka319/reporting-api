@@ -1,3 +1,21 @@
 spring:
   application:
     name: reporting-api
+
+logging:
+  level:
+    com:
+      reporting: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n"
+  file:
+    name: logs/reporting-api.log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
